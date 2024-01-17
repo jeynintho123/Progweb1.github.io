@@ -1,0 +1,189 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<body>
+     <div class="w3-container">
+        <img src="css/kuliah_online.jpg" alt="" height="200px" width="1505px" class="w3-animate-top" />
+     </div>
+
+	<div class="w3-bar w3-grey">
+        <button class="w3-bar-item w3-button" onclick="openBar('Home')">Home</button>
+        <button class="w3-bar-item w3-button" onclick="openBar('Profile')">Profile</button>
+        <button class="w3-bar-item w3-button" onclick="openBar('Jadwal')">Jadwal Mata Kuliah</button>
+        <button class="w3-bar-item w3-button" onclick="openBar('Data')"> Form Data Mahasiswa</button>
+
+		<div class="w3-dropdown-hover">
+			<button class="w3-button">Dropdown</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<button class="w3-bar-item w3-button" onclick="openBar('DataNilai')">Data Nilai Mahasiswa</button>
+				<button class="w3-bar-item w3-button" onclick="openBar('Gaji')">Gaji Pegawai</button>
+			</div>
+		</div>
+    </div>
+
+	<div id="Profile" class="w3-container kota w3-animate-zoom" style="display: none;">
+		<center>
+			<p>
+			<img src="css/jey.jpg" width="300" height="300">
+			<h3> NAMA : JEY NINTHO MAHATA</h3>
+			<h3> NIM : 10123060</h3>
+			<h3> KELAS : IF-2</h3>
+			</p>
+	</div>
+
+	<div id="DataNilai" class="w3-container kota w3-animate-bottom" style="display: none;">
+		<center>
+			<h1>DATA NILAI MAHASISWA UNIKOM
+			<hr>
+			<table border=10>
+				<tr>
+				<th rowspan=2>NO
+				<th rowspan=2>NAMA SISWA
+				<th rowspan=2>MATA KULIAH
+				<th rowspan=2>HARI
+				<th rowspan=2>JAM
+				<th colspan=3>NILAI
+				
+				<tr><th>TUGAS<th>UTS<th>UAS
+				
+				<tr align=center><td>1<td>BUDIMAN<td>ALGORITMA<td>SENIN<td>10<sup>00</sup>-11<sup>00</sup><td>70<th>80<th>85
+				<tr aLign=center><td>2<td>RIDWAN<td>PEMROGRAMAN WEB<td>SELASA<td>08<sup>00</sup>-10<sup>00</sup><td>75<th colspan=2>80
+				<tr align=center><td>3<td>SINTHIA<td>MATEMATIKA SAINS DATA<td>RABU<td>12<sup>20</sup>-13<sup>20</sup><td colspan=2>70<th>75
+				<tr align=center><td>4<td>RINAWATI<td>MATEMATIKA LOGIKA<td>KAMIS<td>10<sup>00</sup>-11<sup>30</sup><th colspan=3>80
+				<tr align=center><td>5<td>SANTI<td>B. INGGRIS<td>JUMAT<td>12<sup>00</sup>-13<sup>00</sup><td>85<th>70<th>75
+			</table>
+	</div>
+
+	<div id="Jadwal" class="w3-container kota w3-animate-top" style="display: none;">
+		<center>
+			<th><h1>Jadwal Mata Kuliah
+			<hr>
+			<table border=10>
+				<tr>
+				<th rowspan=2>HARI
+				<th rowspan=2>JAM
+				<th rowspan=2>MATA KULIAH
+				<th rowspan=2>RUANGAN
+				<th rowspan=2>PERKULIAHAN
+				
+				<tr bgcolor=silver>
+				<tr><td>SENIN<td>08<sup>40</sup>-10<sup>20</sup><td>PEMOGRAMAN WEB 1<td>LAB-7<td>PRAKTIKUM
+				<tr><td>SENIN<td>14<sup>30</sup>-16<sup>10</sup><td>POLA PIKIR DIGITAL<td>R5306<td>TATAP MUKA
+				<tr><td>SELASA<td>09<sup>30</sup>-11<sup>10</sup><td>ALGORITMA DAN STRUKTUR DATA 1<td>R5305<td>TATAP MUKA
+				<tr><td>SELASA<td>14<sup>30</sup>-16<sup>10</sup><td>ALGORITMA DAN STRUKTUR DATA 1<td>6.009<td>PRAKTIKUM
+				<tr><td>RABU<td>08<sup>00</sup>-09<sup>30</sup><td>BAHASA INGGRIS<td>R5605<td>TATAP MUKA
+				<tr><td>RABU<td>09<sup>30</sup>-12<sup>10</sup><td>MATEMATIKA SAINS DATA 1<td>RDAGO9<td>TATAP MUKA
+				<tr><td>KAMIS<td>08<sup>00</sup>-09<sup>30</sup><td>PENGANTAR SISTEM DAN TEKNOLOGI INFORMASI<td>R5406<td>TATAP MUKA
+				<tr><td>KAMIS<td>14<sup>40</sup>-16<sup>10</sup><td>LOGIKA MATEMATIKA<td>R5305<td>TATAP MUKA
+				<tr><td>JUMAT<td>07<sup>00</sup>-08<sup>40</sup><td>BAHASA INDONESIA<td>R5605<td>TATAP MUKA
+			</table>
+	</div>
+
+	<div id="Home" class="w3-container kota w3-animate-fading" style="display:none">
+		<img src="css/unikom_dago.jpg" alt="" width="1505px" class="w3-animate-zoom"/>
+	 </div>
+
+	 <div id="Gaji" class="w3-container kota w3-animate-top" style="display:none">
+		<form name=form>
+			<script>
+			function proses()
+			{
+			var bagian=document.form.bagian.value;
+			if(bagian=="HRD") var gajipokok=80000000;
+			if(bagian=="Pemasaran") var gajipokok=40000000;
+			if(bagian=="Produksi") var gajipokok=35000000;
+			if(bagian=="OB") var gajipokok=30000000;
+			document.form.gajipokok.value=gajipokok;
+			
+			var pendidikan=document.form.pendidikan.value;
+			var tjpendidikan=pendidikan * 1000000;
+			document.form.tjpendidikan.value=tjpendidikan;
+			}
+			
+			</script>
+			
+				<div class="w3-panel w3-red">
+					<center>
+					<p><h>PROGRAM GAJI PEGAWAI
+				</div>
+				
+				<div class="w3-panel w3-blue w3-card-4">
+					<center>
+					<p>
+					<table>
+						<tr><td>Nama pegawai <td><input class="w3-input" type="text" name="namapegawai">
+						<tr><td>Bagian<td><select class="w3-select" name="bagian">
+							<option>HRD
+							<option>Pemasaran
+							<option>Produksi
+							<option>OB
+						</select>
+						
+						<tr><td>PENDIDIKAN<td>
+						<input class="w3-radio" type="radio" name="pendidikan" value="1">S1
+						<input class="w3-radio" type="radio" name="pendidikan" value="2">S2
+						<input class="w3-radio" type="radio" name="pendidikan" value="3">S3
+						
+						<tr><td colspan=2><hr>
+						<tr><td>Gaji Poko <td><input class="w3-input" type="text" name="gajipokok">
+						<tr><td>Tunjangan Pendidikan <td><input class="w3-input" type="text" name="tjpendidikan">
+					</table>
+				</div>
+			
+			
+				<div class="w3-panel w3-gray">
+					<center>
+					<p>
+					<input type="button" class="w3-button w3-blue" value="proses" onclick="proses()">
+					<input type="button" class="w3-button w3-red" value="reset" onclick="reset()">
+				</div>
+				
+			</div>
+			
+	 </div>
+	 </div>
+
+	 <div id="Data" class="w3-container kota w3-animate-zoom" style="display:none">
+		<center>
+			<h1 class="w3-panel w3-orange">FORM DATA MAHASISWA</h1>
+			<hr>
+			<table bgcolor=silver>
+				<tr><td>NOMOR INDUK :<td><input type=text name=nim size=10>
+				<tr><td>NAMA SISWA :<td><input type=text name=namasiswa size=25>
+				<tr><td>JURUSAN :<td>
+					<select name=jurusan>
+						<option> TEKNIK INFORMATIKA
+						<option> TEKNIK KOMPUTER
+						<option> AKUNTANSI
+						<option> MENEJEMEN
+						<option> TEKNIK SIPIL
+					</select>
+				<tr><td>ASAL SEKOLAH :<td><input type= text name=nim size=20>	
+				<tr><td>JENIS KELAMIN :<td>
+					<input type=radio name=jeniskelamin>PRIA
+					<input type=radio name=jeniskelamin>WANITA
+				<tr><td>HOBBY :<td><input type=checkbox name=nonton>NONTON
+				<tr><td><td><input type=checkbox name=sport>SPORT
+				<tr><td><td><input type=checkbox name=makan>MAKAN
+				<tr><td><td><input type=checkbox name=games>GAMES
+				
+				<tr><td>KETERANGAN :<td><textarea name=keterangan rows=5 cols=50></textarea>
+			</table>
+			<hr>
+			<input type=submit>
+			<input type=reset>
+		
+	 </div>
+
+	 <script>
+		function openBar(Home) {
+		   var i;
+		   var x = document.getElementsByClassName("kota");
+		   for (i = 0; i < x.length; i++) {
+		   x[i].style.display = "none";
+		   }
+		document.getElementById(Home).style.display = "block";
+		  }
+   </script>
+</body>
+</html> 
